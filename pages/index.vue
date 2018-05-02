@@ -1,33 +1,36 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        illust.mewko.com
-      </h1>
-      <h2 class="subtitle">
-        illust.mewko.com
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+
+  <v-container grid-list-md>
+    <v-layout row wrap>
+      <flex-card-image v-for="(post, key) in fileMap" :key="key" :src="post.image" :title="post.title" :to="key2path(key)"/>
+    </v-layout>
+  </v-container>
+
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import { fileMap } from '~/posts/json/list.json'
+
+import FlexCardImage from '~/components/FlexCardImage'
 
 export default {
   components: {
-    AppLogo
+    FlexCardImage
+  },
+  data() {
+    return {
+      fileMap: fileMap
+    }
+  },
+  methods: {
+    key2path(key) {
+      const regexp = /posts\/json\/(\d\d\d\d-\d\d-\d\d)_(.*)\.json/i
+      const match = key.match(regexp)
+
+      console.log(match)
+
+      return `${match[1]}/${match[2]}`
+    }
   }
 }
 </script>
