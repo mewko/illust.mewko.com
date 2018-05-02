@@ -2,9 +2,9 @@
   <div id="app">
     <v-app>
       <v-navigation-drawer
+        v-model="drawer"
         fixed
         app
-        v-model="drawer"
       >
         <v-list dense class="pt-0">
           <v-list-tile to="/">
@@ -68,31 +68,31 @@
 </template>
 
 <script>
-  export default {
-    name: 'App',
-    data() {
-      return {
-        drawer: false
-      }
+export default {
+  name: 'App',
+  data() {
+    return {
+      drawer: false
     }
   }
+}
 </script>
 
 <style lang="scss">
-  .fade-enter-active {
-    transition: all 0.2s;
-  }
+.fade-enter-active {
+  transition: all 0.2s;
+}
 
-  .fade-leave-active {
-    transition: all 0.3s;
-  }
+.fade-leave-active {
+  transition: all 0.3s;
+}
 
-  .fade-enter {
-    // transform: translateX(20px);
-    opacity: 0;
-  }
+.fade-enter {
+  // transform: translateX(20px);
+  opacity: 0;
+}
 
-  .fade-leave-to {
-    opacity: 0;
-  }
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
