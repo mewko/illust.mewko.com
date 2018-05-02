@@ -11,7 +11,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "processmd": "processmd posts/md/**/*.{yml,md} --stdout --outputDir posts/json > posts/json/list.json"
   },
   "dependencies": {
     "@nuxtjs/vuetify": "^0.4.2",
