@@ -34,5 +34,18 @@ module.exports = {
         })
       }
     }
+  },
+
+  modules: [
+    '@nuxtjs/vuetify'
+  ],
+
+  vuetify: {
+    theme: {
+      primary: '#999',
+      secondary: '#999',
+      accent: '#999',
+      error: '#999'
+    }
   }
 }
