@@ -27,8 +27,6 @@ export default {
       const regexp = /posts\/json\/(\d\d\d\d-\d\d-\d\d)_(.*)\.json/i
       const match = key.match(regexp)
 
-      console.log(match)
-
       return `${match[1]}/${match[2]}`
     }
   }
