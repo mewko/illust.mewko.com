@@ -12,7 +12,8 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "processmd": "processmd posts/md/**/*.{yml,md} --stdout --outputDir posts/json > posts/json/list.json"
+    "processmd": "processmd posts/md/**/*.{yml,md} --stdout --outputDir posts/json > posts/json/list.json",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxtjs/vuetify": "^0.4.2",
