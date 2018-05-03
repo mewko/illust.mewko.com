@@ -62,7 +62,7 @@ module.exports = {
     }
   },
 
-  generate: {
-    routes: generateDynamicRoutes
-  }
+  // generate: {
+  //   routes: generateDynamicRoutes
+  // }
 }
