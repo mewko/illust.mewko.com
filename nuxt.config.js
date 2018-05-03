@@ -1,3 +1,19 @@
+const { sourceFileArray } = require('./posts/json/list.json')
+
+const sourceFileName2path = key => {
+  const regexp = /posts\/md\/(\d\d\d\d-\d\d-\d\d)_(.*)\.md/i
+  const match = key.match(regexp)
+
+  return `${match[1]}/${match[2]}`
+}
+
+const generateDynamicRoutes = callback => {
+  const routes = sourceFileArray.map(sourceFileName => {
+    return sourceFileName2path(sourceFileName)
+  })
+  callback(null, routes)
+}
+
 module.exports = {
   /*
   ** Headers of the page
@@ -43,5 +59,9 @@ module.exports = {
       accent: '#999',
       error: '#999'
     }
+  },
+
+  generate: {
+    routes: generateDynamicRoutes
   }
 }
