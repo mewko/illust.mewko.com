@@ -1,0 +1,22 @@
+{
+  "fileMap": {
+    "posts/json/2030-04-05_sample.json": {
+      "title": "デグーかわいいね",
+      "category": "デグー",
+      "image": "/images/degu.jpg",
+      "tags": [
+        "かわいい",
+        "デグー",
+        "動物"
+      ],
+      "dir": "posts/json",
+      "base": "2030-04-05_sample.json",
+      "ext": ".json",
+      "sourceBase": "2030-04-05_sample.md",
+      "sourceExt": ".md"
+    }
+  },
+  "sourceFileArray": [
+    "posts/md/2030-04-05_sample.md"
+  ]
+}

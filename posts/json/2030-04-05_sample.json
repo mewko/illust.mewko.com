@@ -1,0 +1,17 @@
+{
+  "title": "デグーかわいいね",
+  "category": "デグー",
+  "image": "/images/degu.jpg",
+  "tags": [
+    "かわいい",
+    "デグー",
+    "動物"
+  ],
+  "bodyContent": "デグーです。\n\nかわいい。",
+  "bodyHtml": "<p>デグーです。</p>\n<p>かわいい。</p>\n",
+  "dir": "posts/json",
+  "base": "2030-04-05_sample.json",
+  "ext": ".json",
+  "sourceBase": "2030-04-05_sample.md",
+  "sourceExt": ".md"
+}
